@@ -32,7 +32,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxСharacteristic = new System.Windows.Forms.GroupBox();
+            this.buttonCreateWaterVehicle = new System.Windows.Forms.Button();
+            this.progressBarMovementProcess = new System.Windows.Forms.ProgressBar();
+            this.comboBoxTypeOfCargo = new System.Windows.Forms.ComboBox();
+            this.textBoxTonnage = new System.Windows.Forms.TextBox();
+            this.textBoxLength = new System.Windows.Forms.TextBox();
+            this.textBoxSpeed = new System.Windows.Forms.TextBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,19 +48,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.textBoxSpeed = new System.Windows.Forms.TextBox();
-            this.textBoxLength = new System.Windows.Forms.TextBox();
-            this.textBoxTonnage = new System.Windows.Forms.TextBox();
-            this.comboBoxTypeOfCargo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxСharacteristic.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(12, 39);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(760, 178);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(760, 178);
             this.pictureBox1.TabIndex = 0;
@@ -82,27 +87,88 @@
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
             // 
-            // groupBox1
+            // groupBoxСharacteristic
             // 
-            this.groupBox1.Controls.Add(this.comboBoxTypeOfCargo);
-            this.groupBox1.Controls.Add(this.textBoxTonnage);
-            this.groupBox1.Controls.Add(this.textBoxLength);
-            this.groupBox1.Controls.Add(this.textBoxSpeed);
-            this.groupBox1.Controls.Add(this.comboBoxType);
-            this.groupBox1.Controls.Add(this.textBoxTitle);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 223);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(759, 270);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Характеристика водного транспортного средства";
+            this.groupBoxСharacteristic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxСharacteristic.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBoxСharacteristic.Controls.Add(this.buttonCreateWaterVehicle);
+            this.groupBoxСharacteristic.Controls.Add(this.progressBarMovementProcess);
+            this.groupBoxСharacteristic.Controls.Add(this.comboBoxTypeOfCargo);
+            this.groupBoxСharacteristic.Controls.Add(this.textBoxTonnage);
+            this.groupBoxСharacteristic.Controls.Add(this.textBoxLength);
+            this.groupBoxСharacteristic.Controls.Add(this.textBoxSpeed);
+            this.groupBoxСharacteristic.Controls.Add(this.comboBoxType);
+            this.groupBoxСharacteristic.Controls.Add(this.textBoxTitle);
+            this.groupBoxСharacteristic.Controls.Add(this.label7);
+            this.groupBoxСharacteristic.Controls.Add(this.label6);
+            this.groupBoxСharacteristic.Controls.Add(this.label5);
+            this.groupBoxСharacteristic.Controls.Add(this.label4);
+            this.groupBoxСharacteristic.Controls.Add(this.label3);
+            this.groupBoxСharacteristic.Controls.Add(this.label2);
+            this.groupBoxСharacteristic.Controls.Add(this.label1);
+            this.groupBoxСharacteristic.Location = new System.Drawing.Point(12, 223);
+            this.groupBoxСharacteristic.Name = "groupBoxСharacteristic";
+            this.groupBoxСharacteristic.Size = new System.Drawing.Size(759, 270);
+            this.groupBoxСharacteristic.TabIndex = 2;
+            this.groupBoxСharacteristic.TabStop = false;
+            this.groupBoxСharacteristic.Text = "Характеристика водного транспортного средства";
+            // 
+            // buttonCreateWaterVehicle
+            // 
+            this.buttonCreateWaterVehicle.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonCreateWaterVehicle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateWaterVehicle.Location = new System.Drawing.Point(403, 211);
+            this.buttonCreateWaterVehicle.Name = "buttonCreateWaterVehicle";
+            this.buttonCreateWaterVehicle.Size = new System.Drawing.Size(310, 44);
+            this.buttonCreateWaterVehicle.TabIndex = 14;
+            this.buttonCreateWaterVehicle.Text = "Создать";
+            this.buttonCreateWaterVehicle.UseVisualStyleBackColor = false;
+            this.buttonCreateWaterVehicle.Click += new System.EventHandler(this.buttonCreateWaterVehicle_Click);
+            // 
+            // progressBarMovementProcess
+            // 
+            this.progressBarMovementProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBarMovementProcess.Location = new System.Drawing.Point(523, 40);
+            this.progressBarMovementProcess.Name = "progressBarMovementProcess";
+            this.progressBarMovementProcess.Size = new System.Drawing.Size(191, 23);
+            this.progressBarMovementProcess.TabIndex = 13;
+            // 
+            // comboBoxTypeOfCargo
+            // 
+            this.comboBoxTypeOfCargo.FormattingEnabled = true;
+            this.comboBoxTypeOfCargo.Location = new System.Drawing.Point(73, 188);
+            this.comboBoxTypeOfCargo.Name = "comboBoxTypeOfCargo";
+            this.comboBoxTypeOfCargo.Size = new System.Drawing.Size(195, 21);
+            this.comboBoxTypeOfCargo.TabIndex = 12;
+            // 
+            // textBoxTonnage
+            // 
+            this.textBoxTonnage.Location = new System.Drawing.Point(120, 236);
+            this.textBoxTonnage.Name = "textBoxTonnage";
+            this.textBoxTonnage.Size = new System.Drawing.Size(148, 20);
+            this.textBoxTonnage.TabIndex = 11;
+            // 
+            // textBoxLength
+            // 
+            this.textBoxLength.Location = new System.Drawing.Point(120, 143);
+            this.textBoxLength.Name = "textBoxLength";
+            this.textBoxLength.Size = new System.Drawing.Size(148, 20);
+            this.textBoxLength.TabIndex = 10;
+            // 
+            // textBoxSpeed
+            // 
+            this.textBoxSpeed.Location = new System.Drawing.Point(120, 99);
+            this.textBoxSpeed.Name = "textBoxSpeed";
+            this.textBoxSpeed.Size = new System.Drawing.Size(148, 20);
+            this.textBoxSpeed.TabIndex = 9;
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Location = new System.Drawing.Point(47, 60);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(221, 21);
+            this.comboBoxType.TabIndex = 8;
             // 
             // textBoxTitle
             // 
@@ -113,8 +179,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(374, 40);
+            this.label7.Location = new System.Drawing.Point(385, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 13);
             this.label7.TabIndex = 6;
@@ -174,59 +242,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Название ";
             // 
-            // comboBoxType
-            // 
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(47, 60);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(221, 21);
-            this.comboBoxType.TabIndex = 8;
-            // 
-            // textBoxSpeed
-            // 
-            this.textBoxSpeed.Location = new System.Drawing.Point(120, 99);
-            this.textBoxSpeed.Name = "textBoxSpeed";
-            this.textBoxSpeed.Size = new System.Drawing.Size(148, 20);
-            this.textBoxSpeed.TabIndex = 9;
-            // 
-            // textBoxLength
-            // 
-            this.textBoxLength.Location = new System.Drawing.Point(120, 143);
-            this.textBoxLength.Name = "textBoxLength";
-            this.textBoxLength.Size = new System.Drawing.Size(148, 20);
-            this.textBoxLength.TabIndex = 10;
-            // 
-            // textBoxTonnage
-            // 
-            this.textBoxTonnage.Location = new System.Drawing.Point(120, 236);
-            this.textBoxTonnage.Name = "textBoxTonnage";
-            this.textBoxTonnage.Size = new System.Drawing.Size(148, 20);
-            this.textBoxTonnage.TabIndex = 11;
-            // 
-            // comboBoxTypeOfCargo
-            // 
-            this.comboBoxTypeOfCargo.FormattingEnabled = true;
-            this.comboBoxTypeOfCargo.Location = new System.Drawing.Point(73, 188);
-            this.comboBoxTypeOfCargo.Name = "comboBoxTypeOfCargo";
-            this.comboBoxTypeOfCargo.Size = new System.Drawing.Size(195, 21);
-            this.comboBoxTypeOfCargo.TabIndex = 12;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = global::Практическая_работа_1.Properties.Resources.море;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxСharacteristic);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
             this.Text = "Мое приложение";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxСharacteristic.ResumeLayout(false);
+            this.groupBoxСharacteristic.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +274,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxСharacteristic;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -252,6 +288,8 @@
         private System.Windows.Forms.TextBox textBoxLength;
         private System.Windows.Forms.TextBox textBoxSpeed;
         private System.Windows.Forms.ComboBox comboBoxType;
+        private System.Windows.Forms.ProgressBar progressBarMovementProcess;
+        private System.Windows.Forms.Button buttonCreateWaterVehicle;
     }
 }
 
